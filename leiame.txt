@@ -22,6 +22,9 @@ de um movimento da raposa que poderia comer determinado ganso.
 Por outro lado, o jogador da raposa atua apenas de forma aleatória e realiza jogadas de salto (um apenas, quando há a possibilidade de comer algum ganso) e
 jogadas de movimento.
 
+PS.: O nome dos executáveis foi alterado! Para compilar tudo, "make all". O programa que implementa as funções para um jogador automático
+chama-se "automatico".
+
 
 ## AUTORES
 - Anna Caroline Bozzi (GRR20173532);

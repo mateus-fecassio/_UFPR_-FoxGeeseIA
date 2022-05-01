@@ -118,7 +118,7 @@ void getPosGansos(char matriz[MAXTAB][MAXTAB], tGanso *gansos) {
 
     for (i = 0; i < MAXTAB; ++i) {
         for (j = 0; j < MAXTAB; ++j) {
-            if (matriz[i][j == 'g']) {
+            if (matriz[i][j] == 'g') {
                 gansos[k].x = i;
                 gansos[k].y = j;
                 k++;
@@ -328,7 +328,7 @@ int main(int argc, char **argv) {
             jogadaGanso(matriz,buf);
 
         // envia o movimento para o controlador do campo
-        // printf("JOGADA: %s", buf);
+        printf("JOGADA: %s", buf);
         tabuleiro_envia(buf);
     }
 }

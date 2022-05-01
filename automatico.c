@@ -107,7 +107,7 @@ void jogadaRaposa(char matriz[MAXTAB][MAXTAB], char *buf) {
             break;
         }
     }
-}
+} //FINALIZADO
 
 
 
@@ -233,20 +233,30 @@ void jogadaGanso(char matriz[MAXTAB][MAXTAB], char *buf) {
                 sprintf(buf, "g m %d %d %d %d", gansos[m].x, gansos[m].y, gansos[m].x+1, gansos[m].y);
                 jogada = 1;
             }
+            //move para a cima
+            else if ((matriz[gansos[m].x-1][gansos[m].y+1] == '-') && !possPerderGanso(matriz, gansos[m].x-1, gansos[m].y)) {
+                sprintf(buf, "g m %d %d %d %d", gansos[m].x-1, gansos[m].y, gansos[m].x, gansos[m].y);
+                jogada = 1;
+            }
             //move para a direita
             else if ((matriz[gansos[m].x][gansos[m].y+1] == '-') && !possPerderGanso(matriz, gansos[m].x, gansos[m].y+1)) {
                 sprintf(buf, "g m %d %d %d %d", gansos[m].x, gansos[m].y, gansos[m].x, gansos[m].y+1);
                 jogada = 1;
             }
+            //move para a esquerda
+            else if ((matriz[gansos[m].x][gansos[m].y-1] == '-') && !possPerderGanso(matriz, gansos[m].x, gansos[m].y+1)) {
+                sprintf(buf, "g m %d %d %d %d", gansos[m].x, gansos[m].y, gansos[m].x, gansos[m].y-1);
+                jogada = 1;
+            }
             else { //testa as duas possibilidades com outro ganso
                 m = (m+1) % GANSOS; 
             }
-            // tentativasGansos++;
+            tentativasGansos++;
         }
     }
     // printaPosGansos(gansos);
     free(gansos);
-}
+} //FINALIZADO
 
 
 //---------------------------------------
@@ -314,7 +324,7 @@ int main(int argc, char **argv) {
         printf("\n");
         printf("%s", tabuleiro);
 
-        puts("mat:");
+        printf("mat:");
         for (i = 0 ; i < MAXTAB ; i++){
             for (j = 0 ; j < MAXTAB ; j++){
                 printf ("%c", matriz[i][j]);

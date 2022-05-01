@@ -1,0 +1,25 @@
+# RAPOSA E GANSOS
+
+## O QUE É JOGO
+O jogo "A raposa e os gansos" é um jogo de tabuleiro onde dois jogadores se enfrentam, um deles com 13 gansos e outro com uma raposa. 
+
+O objetivo dos gansos é imobilizar a raposa e o objetivo da raposa é eliminar os gansos do tabuleiro. 
+Tanto a raposa quanto os gansos se movimentam na vertical ou na horizontal, uma posição de cada vez, desde que a posição de destino esteja desocupada. 
+
+Para eliminar um ganso do tabuleiro a raposa pode saltar sobre ele. 
+Os saltos podem ser tanto na vertical quanto na horizontal. 
+Para saltar sobre um ganso, a raposa deve estar na posição vizinha a do ganso e a posição de destino do salto deve estar vazia e ser vizinha à posição do ganso. 
+Em uma mesma jogada a raposa pode fazer uma sequência de saltos, eliminando assim mais de um ganso. 
+
+O jogo termina, quando não for possível mover a raposa ou quando o número de gansos for menor que 4.
+ 
+## DESCRIÇÃO DA IMPLEMENTAÇÃO REALIZADA
+
+
+## AUTORES
+- Anna Caroline Bozzi (GRR20173532);
+- Mateus Felipe de Cássio Ferreira (GRR20176123).
+
+
+### DISCIPLINA: CI209 - Inteligência Artificial
+- Orientador: Fabiano Silva

@@ -70,16 +70,16 @@ void jogadaRaposa(char matriz[MAXTAB][MAXTAB], char *buf) {
     getPosRaposa(matriz, &rapX, &rapY);
 
     if ((matriz[rapX-1][rapY] == 'g') && (matriz[rapX-2][rapY]) == '-') { //come ganso acima
-        sprintf(buf, "r m %d %d %d %d\n", rapX, rapY, rapX-2, rapY);
+        sprintf(buf, "r s 2 %d %d %d %d\n", rapX, rapY, rapX-2, rapY);
     }
     else if ((matriz[rapX+1][rapY] == 'g') && (matriz[rapX+2][rapY]) == '-') { //come ganso abaixo
-        sprintf(buf, "r m %d %d %d %d\n", rapX, rapY, rapX+2, rapY);
+        sprintf(buf, "r s 2 %d %d %d %d\n", rapX, rapY, rapX+2, rapY);
     }
     else if ((matriz[rapX][rapY-1] == 'g') && (matriz[rapX][rapY-2]) == '-') { //come ganso à esquerda
-        sprintf(buf, "r m %d %d %d %d\n", rapX, rapY, rapX, rapY-2);
+        sprintf(buf, "r s 2 %d %d %d %d\n", rapX, rapY, rapX, rapY-2);
     }
     else if ((matriz[rapX][rapY+1] == 'g') && (matriz[rapX][rapY+2]) == '-') { //come ganso à direita
-        sprintf(buf, "r m %d %d %d %d\n", rapX, rapY, rapX, rapY+2);
+        sprintf(buf, "r s 2 %d %d %d %d\n", rapX, rapY, rapX, rapY+2);
     }
 
     //se não tem nenhuma raposa para comer ao seu redor

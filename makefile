@@ -1,6 +1,5 @@
-# CFLAGS = -g -Wall -Wno-unused-result -O3
 CC = gcc
-CFLAGS = -g -O3
+CFLAGS = -g -Wall -Wno-unused-result -O3
 LDLIBS = -l hiredis -l readline
 TARGETS = controlador interativo automatico
 
@@ -14,10 +13,10 @@ all: $(TARGETS)
 controlador: controlador.c
 	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
 
-p_automatico: tabuleiro.h tabuleiro.c automatico.c
+automatico: tabuleiro.h tabuleiro.c automatico.c
 	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
 
-p_interativo: tabuleiro.h tabuleiro.c interativo.c
+interativo: tabuleiro.h tabuleiro.c interativo.c
 	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
 
 

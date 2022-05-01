@@ -56,7 +56,7 @@ void getPosRaposa(char matriz[MAXTAB][MAXTAB], int *rapX, int *rapY) {
 
     for (i = 0; i < MAXTAB; ++i) {
         for (j = 0; j < MAXTAB; ++j) {
-            if (matriz[i][j == 'r']) {
+            if (matriz[i][j] == 'r') {
                 *rapX = i;
                 *rapY = j;
             }

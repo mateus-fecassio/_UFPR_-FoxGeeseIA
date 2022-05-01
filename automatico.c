@@ -132,21 +132,21 @@ void getPosGansos(char matriz[MAXTAB][MAXTAB], tGanso *gansos) {
 void printPosGansos(tGanso *gansos) {
     int i;
 
-    printf("ID: X Y\n");
+    // printf("ID: X Y\n");
     for (i = 0; i < GANSOS; ++i) {
-        printf("%d: %d %d\n", i, gansos[i].x, gansos[i].y);
+        printf("GANSO %d: %d %d\n", i, gansos[i].x, gansos[i].y);
     }
 } //FINALIZADO
 
 //GANSO: determina para uma posição x,y se há a possibilidade de um ganso ser comido
 int possPerderGanso(char matriz[MAXTAB][MAXTAB], int x, int y) {
-    if ((matriz[x][y+1] == 'r') && (matriz[x][y-1] == '-')) //come para cima
+    if ((matriz[x][y+1] == 'r') && (matriz[x][y-1] == '-')) //come para a esquerda
         return 1;
-    else if ((matriz[x][y-1] == 'r') && (matriz[x][y+1] == '-')) //come para baixo
+    else if ((matriz[x][y-1] == 'r') && (matriz[x][y+1] == '-')) //come para a direita
         return 1;
-    else if ((matriz[x-1][y] == 'r') && (matriz[x+1][y] == '-')) //come para a direita
+    else if ((matriz[x-1][y] == 'r') && (matriz[x+1][y] == '-')) //come para cima
         return 1;
-    else if ((matriz [x+1][y] == 'r') && (matriz[x-1][y] == '-')) //come para a esquerda
+    else if ((matriz [x+1][y] == 'r') && (matriz[x-1][y] == '-')) //come para baixo
         return 1;
     else
         return 0;
@@ -241,7 +241,7 @@ void jogadaGanso(char matriz[MAXTAB][MAXTAB], char *buf) {
             else { //testa as duas possibilidades com outro ganso
                 m = (m+1) % GANSOS; 
             }
-            tentativasGansos++;
+            // tentativasGansos++;
         }
     }
     // printaPosGansos(gansos);
@@ -266,7 +266,7 @@ int main(int argc, char **argv) {
     int mov_adv_l[MAXINT];
     int mov_adv_c[MAXINT];
     char matriz[MAXTAB][MAXTAB];
-    int i;
+    int i,j;
 
     // conecta com o controlador do campo
     tabuleiro_conecta(argc, argv);
@@ -314,8 +314,15 @@ int main(int argc, char **argv) {
         printf("\n");
         printf("%s", tabuleiro);
 
+        puts("mat:");
+        for (i = 0 ; i < MAXTAB ; i++){
+            for (j = 0 ; j < MAXTAB ; j++){
+                printf ("%c", matriz[i][j]);
+            }
+        }
+
         // prepara um string com o movimento
-        if(lado_meu == 'r')
+        if (lado_meu == 'r')
             jogadaRaposa(matriz,buf);
         else
             jogadaGanso(matriz,buf);

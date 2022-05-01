@@ -14,6 +14,12 @@ Em uma mesma jogada a raposa pode fazer uma sequência de saltos, eliminando ass
 O jogo termina, quando não for possível mover a raposa ou quando o número de gansos for menor que 4.
  
 ## DESCRIÇÃO DA IMPLEMENTAÇÃO REALIZADA
+Basicamente, a implementação realizada faz uma abordagem aleatória para ambos os jogadores. Para o jogador do ganso, existem algumas funções que determinam
+qual ganso está em perigo e uma função para verificar a possibilidade de perder um determinado ganso. Essas funções foram implementadas de forma a não permitir
+tanta aleatoriedade assim na escolha de qual ganso mover. Além disso, na função da jogada é implementado um trecho em que há uma tentativa de bloqueio
+de um movimento da raposa que poderia comer determinado ganso.
+
+Por outro lado, o jogador da raposa atua apenas de forma aleatória e realiza apenas jogadas de movimento.
 
 
 ## AUTORES

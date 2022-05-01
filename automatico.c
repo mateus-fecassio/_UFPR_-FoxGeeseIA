@@ -85,9 +85,9 @@ void jogadaRaposa(char matriz[MAXTAB][MAXTAB], char *buf) {
     //se não tem nenhuma raposa para comer ao seu redor
     else {
         r = rand() % 4;
-        switch(r){
+        switch(r) {
             case 0:
-            if ((matriz[rapX-1][rapY] == '-'))// move para cima
+            if ((matriz[rapX-1][rapY] == '-')) // move para cima
                 sprintf(buf, "r m %d %d %d %d\n", rapX, rapY, rapX-1, rapY);
             break;
             
@@ -248,7 +248,7 @@ void jogadaGanso(char matriz[MAXTAB][MAXTAB], char *buf) {
                 sprintf(buf, "g m %d %d %d %d", gansos[m].x, gansos[m].y, gansos[m].x, gansos[m].y-1);
                 jogada = 1;
             }
-            else { //testa as duas possibilidades com outro ganso
+            else { //testa as possibilidades com outro ganso
                 m = (m+1) % GANSOS; 
             }
             tentativasGansos++;
@@ -258,11 +258,7 @@ void jogadaGanso(char matriz[MAXTAB][MAXTAB], char *buf) {
     free(gansos);
 } //FINALIZADO
 
-
 //---------------------------------------
-
-
-
 
 
 //------------------------------------------MAIN

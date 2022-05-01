@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -g -Wall -Wno-unused-result -O3
 LDLIBS = -l hiredis -l readline
-TARGETS = controlador interativo automatico
+TARGETS = controlador automatico interativo
 
 
 .PHONY: default

@@ -235,7 +235,7 @@ void jogadaGanso(char matriz[MAXTAB][MAXTAB], char *buf) {
             }
             //move para a cima
             else if ((matriz[gansos[m].x-1][gansos[m].y] == '-') && !possPerderGanso(matriz, gansos[m].x-1, gansos[m].y)) {
-                sprintf(buf, "g m %d %d %d %d", gansos[m].x-1, gansos[m].y, gansos[m].x-1, gansos[m].y);
+                sprintf(buf, "g m %d %d %d %d", gansos[m].x, gansos[m].y, gansos[m].x-1, gansos[m].y);
                 jogada = 1;
             }
             //move para a direita

@@ -214,7 +214,7 @@ void jogadaGanso(char matriz[MAXTAB][MAXTAB], char *buf) {
             if (matriz[i+1][j-1] == 'g')
                 sprintf(buf, "g m %d %d %d %d", i+1, j-1, i, j-1);
         }
-        else { //não encontrou nenhuma outra raposa para ajudar a bloquear, então, o ganso em perigo tenta se salvar
+        else { //não encontrou nenhum outro ganso para ajudar a bloquear, então, o ganso em perigo tenta se salvar
             if (matriz[i][j-1] == '-') // vai para a esquerda
                 sprintf(buf, "g m %d %d %d %d", i, j, i, j-1);
             if (matriz[i][j+1] == '-') // vai para a direita
@@ -249,7 +249,7 @@ void jogadaGanso(char matriz[MAXTAB][MAXTAB], char *buf) {
                 sprintf(buf, "g m %d %d %d %d", gansos[m].x, gansos[m].y, gansos[m].x, gansos[m].y-1);
                 jogada = 1;
             }
-            else { //testa as possibilidades com outro ganso
+            else { //testa todas as possibilidades com outro ganso
                 m = (m+1) % GANSOS; 
             }
             tentativasGansos++;

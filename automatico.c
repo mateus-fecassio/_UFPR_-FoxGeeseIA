@@ -234,8 +234,8 @@ void jogadaGanso(char matriz[MAXTAB][MAXTAB], char *buf) {
                 jogada = 1;
             }
             //move para a cima
-            else if ((matriz[gansos[m].x-1][gansos[m].y+1] == '-') && !possPerderGanso(matriz, gansos[m].x-1, gansos[m].y)) {
-                sprintf(buf, "g m %d %d %d %d", gansos[m].x-1, gansos[m].y, gansos[m].x, gansos[m].y);
+            else if ((matriz[gansos[m].x-1][gansos[m].y] == '-') && !possPerderGanso(matriz, gansos[m].x-1, gansos[m].y)) {
+                sprintf(buf, "g m %d %d %d %d", gansos[m].x-1, gansos[m].y, gansos[m].x-1, gansos[m].y);
                 jogada = 1;
             }
             //move para a direita
@@ -244,7 +244,7 @@ void jogadaGanso(char matriz[MAXTAB][MAXTAB], char *buf) {
                 jogada = 1;
             }
             //move para a esquerda
-            else if ((matriz[gansos[m].x][gansos[m].y-1] == '-') && !possPerderGanso(matriz, gansos[m].x, gansos[m].y+1)) {
+            else if ((matriz[gansos[m].x][gansos[m].y-1] == '-') && !possPerderGanso(matriz, gansos[m].x, gansos[m].y-1)) {
                 sprintf(buf, "g m %d %d %d %d", gansos[m].x, gansos[m].y, gansos[m].x, gansos[m].y-1);
                 jogada = 1;
             }

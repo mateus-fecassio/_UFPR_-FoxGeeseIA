@@ -69,6 +69,7 @@ void jogadaRaposa(char matriz[MAXTAB][MAXTAB], char *buf) {
 
     getPosRaposa(matriz, &rapX, &rapY);
 
+    //jogada de salto onde há alguma possibilidade de comer
     if ((matriz[rapX-1][rapY] == 'g') && (matriz[rapX-2][rapY]) == '-') { //come ganso acima
         sprintf(buf, "r s 2 %d %d %d %d\n", rapX, rapY, rapX-2, rapY);
     }
